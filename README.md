@@ -18,6 +18,12 @@ Or if you are running `mxdev` via a local virtual environment:
 uv pip install mxdev mxdev-uv-pyproject-updater
 ```
 
+You can also run it directly using `uvx` as follows:
+
+```bash
+uvx --with="mxdev-uv-pyproject-updater" mxdev -c mx.ini
+```
+
 ## Usage
 
 Because it registers an `mxdev` entry point, this hook runs automatically whenever you run `mxdev`. It will automatically detect packages defined in your `mx.ini` file and write the corresponding configuration to your `pyproject.toml` file.

@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mxdev-uv-pyproject-updater"
+version = "0.1.0"
+description = "An mxdev hook to update pyproject.toml for uv workflows"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["mxdev>=3.0.0", "tomlkit>=0.12.0"]
+
+[project.entry-points.mxdev]
+hook = "mxdev_uv_pyproject_updater.hook:UvPyprojectUpdater"

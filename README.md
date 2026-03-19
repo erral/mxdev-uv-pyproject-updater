@@ -1,17 +1,19 @@
 # mxdev-uv-pyproject-updater
 
-An [mxdev](https://github.com/mxdev-org/mxdev) extension hook that automatically updates `pyproject.toml` during the mxdev write phase to support [uv](https://github.com/astral-sh/uv) workflows.
+An [mxdev](https://github.com/mxstack/mxdev/) extension hook that automatically updates `pyproject.toml` during the mxdev write phase to support [uv](https://github.com/astral-sh/uv) workflows.
 
 ## Installation
 
 You must install this package in the same environment as `mxdev`.
 
 If you are using `uv` to run `mxdev` globally, you can install the hook via `uv tool install`:
+
 ```bash
 uv tool install mxdev --with mxdev-uv-pyproject-updater
 ```
 
 Or if you are running `mxdev` via a local virtual environment:
+
 ```bash
 uv pip install mxdev mxdev-uv-pyproject-updater
 ```
@@ -31,8 +33,8 @@ Because it registers an `mxdev` entry point, this hook runs automatically whenev
    ```
 
 2. **Smart Dependency Injection**
-   The hook safely inserts your checked-out packages directly into your `[project]` `dependencies` array. 
-   
+   The hook safely inserts your checked-out packages directly into your `[project]` `dependencies` array.
+
    It implements strict **PEP 503 normalization** (converting `-`, `_`, and `.` equivalently) to intelligently ensure packages aren't duplicated, even if the dependency is already specified in your `pyproject.toml` with version specifiers or extras.
 
    ```toml

@@ -52,3 +52,7 @@ Because it registers an `mxdev` entry point, this hook runs automatically whenev
 
 3. **Format Preservation**
    Built on `tomlkit`, it safely updates `pyproject.toml` while perfectly preserving all your existing user formatting, arrays, spacing, and comments.
+
+## AI usage disclaimer
+
+This tool has been created with the help of Gemini AI.
